@@ -1,6 +1,7 @@
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { useRef } from "react";
+import barbaro from "../assets/barbaro.gif";
 const ClickAnimation = () => {
   const container = useRef();
 
@@ -21,14 +22,13 @@ const ClickAnimation = () => {
   return (
     <div
       ref={container}
-      className="w-full  border-b flex justify-center border-red-600"
+      className="w-full  mb-12 border-b flex justify-center border-red-600"
     >
-      <div
+      <img
+        src={barbaro}
         onClick={onClickSafe}
-        className=" box w-32 h-32 bg-green-500 flex justify-center items-center font-bold hover: cursor-pointer"
-      >
-        Click me
-      </div>
+        className=" w-42 h-32 box object-center  hover: cursor-pointer"
+      />
     </div>
   );
 };
